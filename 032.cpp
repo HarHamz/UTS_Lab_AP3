@@ -1,8 +1,20 @@
-// TODO 1: Ubah nama file ini menjadi NIM Anda. Cth: 001.cpp, 042.cpp, 080.cpp
-
-// TODO 2: Buat program anda di file ini. INGAT BERI KOMENTAR PADA SETIAP PROSES DALAM PROGRAM ANDA
-
-// TODO 3: Selesaikan dan kumpulkan sebelum deadline yang telah ditentukan; Details ada dalam file README.md
-
-// Tetap semangat walau sulit ;p
-
+#include <iostream>
+using namespace std;
+main (){
+    string nomorKartu;
+    int digitKartu,checksum;
+    string tipeKartu;
+    cout<<"Masukkan nomor kartu : ";
+    cin>>nomorKartu;
+        if((nomorKartu.length()==16)&&((nomorKartu[0]==51||nomorKartu[0]==52||nomorKartu[0]==53||nomorKartu[0]==54||nomorKartu[0]==55)))
+        {
+            tipeKartu="MASTERCARD";
+        }
+        else if (((nomorKartu.length()==13)&&(nomorKartu[0]==4))||((nomorKartu.length()==13)&&(nomorKartu[0]==4))){
+            tipeKartu="VISA";
+        }
+    cout<<digitKartu<<endl;
+    cout<<"Nomor kartu anda : "<<nomorKartu<<endl;
+    cout<<"Tipe kartu anda : "<<tipeKartu<<endl;
+    cout<<"Checksum : "<<checksum<<endl;
+}
