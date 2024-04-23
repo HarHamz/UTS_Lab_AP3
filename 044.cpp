@@ -1,14 +1,17 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    long long angka_kartu;
+    long long angka_kartu,nomor_kartu;
     string tipe_kartu;
     int checksum,jumlah,digit,i;
 
     cout<<"masukkan angka kartu: ";
     cin>>angka_kartu;
-    cout<<"nomor kartu anda: "<<angka_kartu<<endl;
+
+    nomor_kartu = angka_kartu;
+    cout<<"nomor kartu anda: "<<nomor_kartu<<endl;
 
     //untuk checksum
     jumlah = 0;
@@ -25,20 +28,19 @@ int main() {
     angka_kartu = angka_kartu/10;
     i++;
     }
-    checksum = jumlah%10;
 
 
     //untuk tipe kartu
-    if (angka_kartu>5099999999999999 && angka_kartu<5600000000000000) {
-        if (checksum=0) {
+    if (nomor_kartu>=5100000000000000 && nomor_kartu<=5599999999999999) {
+        if (jumlah%10==0) {
             tipe_kartu = "Mastercard";
         }
         else {
             tipe_kartu = "Tidak Valid";
         }
     }
-    else if((angka_kartu/10000000000000==4) || (angka_kartu/10000000000==4)) {
-        if (checksum=0) {
+    else if((nomor_kartu/1000000000000000==4) || (nomor_kartu/1000000000000==4)) {
+        if (jumlah%10==0) {
             tipe_kartu = "Visa ";
         }
         else {
