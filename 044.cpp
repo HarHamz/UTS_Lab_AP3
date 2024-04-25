@@ -2,7 +2,6 @@
 #include <string>
 using namespace std;
 
-
 int main() {
     long long angka_kartu,nomor_kartu;
     string tipe_kartu;
@@ -53,8 +52,6 @@ int main() {
         tipe_kartu = "tidak diketahui";
     }
     
-
- 
     cout<<"tipe kartu: "<<tipe_kartu<<endl;
     cout<<"checksum: "<<jumlah<<endl;
     return 0;
