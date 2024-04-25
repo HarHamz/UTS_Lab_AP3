@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+
 int main() {
     long long angka_kartu,nomor_kartu;
     string tipe_kartu;
@@ -28,6 +29,7 @@ int main() {
     angka_kartu = angka_kartu/10;
     i++;
     }
+
 
 
     //untuk tipe kartu
