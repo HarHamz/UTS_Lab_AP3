@@ -1,22 +1,18 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 //fungsi untuk menghitung checksum
 int hitungchecksum(long long angka_kartu){//angka_kartu adalah nomor kartu yang diinputkan
     int jumlah=0,digit,i=1;
-    /*
-    jumlah diinisialisasi dengan 0, digunakan untuk menghitung jumlah akhir
-    digit utk menyimpan digit terakhir dari nomor kartu
-    i diinisialisasi dengan 1, digunakan untuk menentukan digit genap atau ganjil
-    */
+    /* jumlah diinisialisasi dengan 0, digunakan untuk menghitung jumlah akhir
+    digit utk menyimpan digit terakhir dari nomor kartu i diinisialisasi dengan 1, 
+    digunakan untuk menentukan digit genap atau ganjil */
     while(angka_kartu>0) { digit = angka_kartu%10;//jika nomor kartu lebih dari 0, digitnya adalah digit terakhir dari nomor kartu
         if (i%2==0) { digit = digit*2;//jika i genap, digit dikalikan 2
             if (digit>9) { digit = digit/10+digit%10;
             /* jika digit lebih dari 9, digit dipecah menjadi 2 digit
                 dengan digit/10 adalah digit pertama dan digit%10 adalah digit kedua 
-                lalu keduanya dijumlahkan
-            */
+                lalu keduanya dijumlahkan */
             }
         }
         jumlah = jumlah+digit;//digit ditambahkan ke jumlah
